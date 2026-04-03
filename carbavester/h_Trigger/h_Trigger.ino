@@ -1,11 +1,11 @@
-//const int LED_PIN    = 13;
+const int LED_PIN    = 13;
 const int MOTOR1_IN1 = 8;
 const int MOTOR1_IN2 = 9;
-const int MOTOR2_IN3 = 12;
-const int MOTOR2_IN4 = 13;
+const int MOTOR2_IN3 =  10;
+const int MOTOR2_IN4 = 11;
 
 void setup() {
-//  pinMode(LED_PIN, OUTPUT);
+ pinMode(LED_PIN, OUTPUT);
 
   // Motor A
   pinMode(MOTOR1_IN1, OUTPUT);
@@ -29,7 +29,7 @@ void loop() {
     char c = Serial.read();
 
     if (c == 'H') {
-//      digitalWrite(LED_PIN, HIGH);             
+     digitalWrite(LED_PIN, HIGH);             
 
       // Motor A forward
       digitalWrite(MOTOR1_IN1, HIGH);
@@ -40,7 +40,7 @@ void loop() {
       digitalWrite(MOTOR2_IN4, HIGH);
 
     } else if (c == 'L') {
-//      digitalWrite(LED_PIN, LOW);              
+     digitalWrite(LED_PIN, LOW);              
 
       // Stop both motors
       digitalWrite(MOTOR1_IN1, LOW);
